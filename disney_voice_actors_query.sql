@@ -10,6 +10,7 @@ FROM
     
     
     
--- #### 1. Remove index column #### --
+-- #### 1. REMOVE INDEX COLUMN #### --
 
-ALTER TABLE disney_voice_actors DROP COLUMN  `index`;
+ALTER TABLE disney_voice_actors
+DROP COLUMN  `index`;

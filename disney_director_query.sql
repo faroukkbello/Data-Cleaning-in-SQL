@@ -10,6 +10,7 @@ FROM
     
 
 
--- #### 1. Remove index column #### --
+-- #### 1. REMOVE INDEX COLUMN #### --
 
-ALTER TABLE disney_director DROP COLUMN `index`;
+ALTER TABLE disney_director
+DROP COLUMN `index`;

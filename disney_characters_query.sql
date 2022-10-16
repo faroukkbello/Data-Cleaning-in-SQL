@@ -10,9 +10,10 @@ FROM
     
     
 
--- #### 1. Remove index column #### --
+-- #### 1. REMOVE INDEX COLUMN #### --
 
-ALTER TABLE disney_characters DROP COLUMN `index`;
+ALTER TABLE disney_characters
+DROP COLUMN `index`;
 
 
 
@@ -46,4 +47,5 @@ SET
     release_date = STR_TO_DATE(`release`, '%d/%m/%Y');
 
 -- Delete 'release' column from the table
-ALTER TABLE disney_characters drop column `release`
+ALTER TABLE disney_characters
+DROP COLUMN `release`;
