@@ -135,10 +135,35 @@ WHERE
     
 
 
--- #### 7.  #### --
+-- #### 7. DEAL WITH RECORDS EMPTY GENRE COLUMN #### --
+
+-- Check how many records have blank genre column to see if we can
+-- remove them if and only if they are less than 5% of the total
+-- observation.
+ SELECT 
+    COUNT(dmtg.genre) AS Total_Genre,
+    E.Empty_Genre,
+    (E.Empty_Genre / COUNT(dmtg.genre)) * 100 AS Percentage_Of_Empty
+FROM
+    disney_movies_total_gross dmtg,
+    (SELECT 
+        COUNT(*) AS Empty_Genre
+    FROM
+        disney_movies_total_gross
+    WHERE
+        genre = '') AS E;
+
+-- Records with Empty Genre are only 2.61% which is less than 5%,
+-- so let's go ahead and remove them. They don't have a genre and
+-- they will affect our model later on.
+DELETE FROM disney_movies_total_gross 
+WHERE
+    genre = '';
+    
+-- Display our dataset
 SELECT 
     *
 FROM
     disney_movies_total_gross
-WHERE
-    genre = '';
+
+# --- NOW WE CAN USE THIS TABLE FOR ANALYSIS --- #
