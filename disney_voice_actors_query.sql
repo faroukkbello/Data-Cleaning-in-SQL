@@ -17,7 +17,7 @@ DROP COLUMN  `index`;
 
 
 
--- #### 2. CHECK FOR BLANKS #### --
+-- #### 2. CHECK FOR DATA QUALITY ISSUES #### --
 
 -- Start with the character column
 SELECT DISTINCT
