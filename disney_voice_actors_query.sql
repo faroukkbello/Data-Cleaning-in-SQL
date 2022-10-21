@@ -41,7 +41,7 @@ WHERE
                 disney_voice_actors
             GROUP BY `character`
             HAVING character_count > 1) AS Characters_More_Than_One)
-ORDER BY movie;
+ORDER BY `character`;
             
 -- We can see that the voice actors differ for the same character per movie.
 -- So let's do a disntinct count on the voice actors from the result set of
@@ -79,7 +79,7 @@ SELECT DISTINCT
 FROM
     disney_voice_actors
 ORDER BY movie;
--- 139 Rows here only implies we have multiple character in one movie.
+-- 139 Rows here only implies we have multiple characters in one movie.
 -- This is also plausible hence we leave it as it is.
 
 # --- NOW WE CAN USE THIS TABLE FOR ANALYSIS --- #

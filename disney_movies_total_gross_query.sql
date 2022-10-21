@@ -141,11 +141,14 @@ WHERE
 -- remove them if and only if they are less than 5% of the total
 -- observation.
  SELECT 
-    COUNT(dmtg.genre) AS Total_Genre,
+    T.Total_Genre,
     E.Empty_Genre,
-    (E.Empty_Genre / COUNT(dmtg.genre)) * 100 AS Percentage_Of_Empty
+    (E.Empty_Genre / T.T.Total_Genre) * 100 AS Percentage_Of_Empty
 FROM
-    disney_movies_total_gross dmtg,
+    (SELECT 
+        COUNT(*) AS Total_Genre
+    FROM
+        disney_movies_total_gross) AS T,
     (SELECT 
         COUNT(*) AS Empty_Genre
     FROM
