@@ -105,3 +105,106 @@ SET
     hero = 'Benny Goodman'
 WHERE
     movie_title = 'Make Mine Music';
+
+
+
+-- #### 4. POPULATE BLANK VILLIAN COLUMN ENTRIES #### --
+
+-- How many blank/empty string entries do we have?
+SELECT 
+    COUNT(villian)
+FROM
+    disney_characters
+WHERE
+    villian = '';    
+-- Let's do the same thing we did for hero column here as well.
+SELECT 
+    *
+FROM
+    disney_characters
+WHERE
+    villian = '';
+    
+-- Aconcagua is the villian in Saludos Amigos so let's populate
+UPDATE disney_characters 
+SET 
+    villian = 'Aconcagua'
+WHERE
+    movie_title = 'Saludos Amigos';
+    
+-- The Toy Bull is an antagonist in Disney's 1945 animated feature
+-- film The Three Caballeros. So let's populate.
+UPDATE disney_characters 
+SET 
+    villian = 'The Toy Bull'
+WHERE
+    movie_title = 'The Three Caballeros';
+    
+-- Tetti-Tatti, is the main antagonist in the segment The Whale
+-- Who Wanted to Sing at the Met from Disney's 8th full-length
+-- animated feature film Make Mine Music.
+UPDATE disney_characters 
+SET 
+    villian = 'Tetti-Tatti'
+WHERE
+    movie_title = 'Make Mine Music';
+    
+-- The Vultures are villains in the 1948 film, Melody Time.
+-- They want to eat Widowmaker.
+UPDATE disney_characters 
+SET 
+    villian = 'The Vultures'
+WHERE
+    movie_title = 'Melody Time';
+    
+-- Heff the Heffalump is a recurring villain in the movie, 
+-- 'The Many Adventures of Winnie the Pooh'.
+UPDATE disney_characters 
+SET 
+    villian = 'Heff the Heffalump'
+WHERE
+    movie_title = 'The Many Adventures of Winnie the Pooh';
+    
+-- The Firebird is the main antagonist of Disney's 38th
+--  full-length animated feature film Fantasia 2000.
+UPDATE disney_characters 
+SET 
+    villian = 'The Firebird'
+WHERE
+    movie_title = 'Fantasia 2000';
+    
+-- Heffalumps and Woozles are the overall main antagonists of
+-- Disney's Winnie the Pooh franchise.
+UPDATE disney_characters 
+SET 
+    villian = 'Heffalumps and Woozles'
+WHERE
+    movie_title = 'Winnie the Pooh';
+    
+-- Jacques von Hämsterviel, also simply known as Dr. Hämsterviel,
+-- is the main antagonist of the Lilo & Stitch franchise.
+UPDATE disney_characters 
+SET 
+    villian = 'Dr. Hämsterviel'
+WHERE
+    movie_title = 'Lilo & Stitch';
+    
+-- Dawn Bellwether is the main antagonist of Disney's 55th
+-- full-length animated feature film Zootopia.
+UPDATE disney_characters 
+SET 
+    villian = 'Dawn Bellwether'
+WHERE
+    movie_title = 'Zootopia';
+    
+-- Te Kā is the main antagonist of Disney's 56th full-length
+-- animated feature film Moana.
+UPDATE disney_characters 
+SET 
+    villian = 'Te Kā'
+WHERE
+    movie_title = 'Moana';
+
+
+
+-- #### 4. POPULATE BLANK SONG COLUMN ENTRIES #### --
