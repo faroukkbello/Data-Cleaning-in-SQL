@@ -116,7 +116,7 @@ SELECT
 FROM
     disney_characters
 WHERE
-    villian = '';    
+    villian = '';
 -- Let's do the same thing we did for hero column here as well.
 SELECT 
     *
@@ -208,3 +208,90 @@ WHERE
 
 
 -- #### 4. POPULATE BLANK SONG COLUMN ENTRIES #### --
+
+-- How many blank/empty string entries do we have?
+SELECT 
+    COUNT(song)
+FROM
+    disney_characters
+WHERE
+    song = '';
+-- Let's do the same thing we did for hero column here as well.
+SELECT 
+    *
+FROM
+    disney_characters
+WHERE
+    song = '';
+    
+-- Fantasia: "Toccata and Fugue in D Minor" by Johann Sebastian Bach.
+UPDATE disney_characters 
+SET 
+    song = 'Toccata and Fugue in D Minor'
+WHERE
+    movie_title = 'Fantasia';
+    
+-- The Three Caballeros: "The Three Caballeros".
+UPDATE disney_characters 
+SET 
+    song = 'The Three Caballeros'
+WHERE
+    movie_title = 'The Three Caballeros';
+    
+-- Make Mine Music: "Make Mine Music".
+UPDATE disney_characters 
+SET 
+    song = 'Make Mine Music'
+WHERE
+    movie_title = 'Make Mine Music';
+    
+-- Fun and Fancy Free: "Fun and Fancy Free".
+UPDATE disney_characters 
+SET 
+    song = 'Fun and Fancy Free'
+WHERE
+    movie_title = 'Fun and Fancy Free';
+    
+-- The Black Cauldron: "The Black Cauldron"
+UPDATE disney_characters 
+SET 
+    song = 'The Black Cauldron'
+WHERE
+    movie_title = 'The Black Cauldron';
+    
+-- Fantasia 2000: "Pomp and Circumstance" – Marches 1, 2, 3 and 4 by Edward Elgar.
+UPDATE disney_characters 
+SET 
+    song = 'Pomp and Circumstance'
+WHERE
+    movie_title = 'Fantasia 2000';
+    
+-- Dinosaur: "The Egg Travels".
+UPDATE disney_characters 
+SET 
+    song = 'The Egg Travels'
+WHERE
+    movie_title = 'Dinosaur';
+    
+-- Chicken Little: "One Little Slip".
+UPDATE disney_characters 
+SET 
+    song = 'One Little Slip'
+WHERE
+    movie_title = 'Chicken Little';
+    
+-- Home on the Range: "Home on the Range"
+UPDATE disney_characters 
+SET 
+    song = 'Home on the Range'
+WHERE
+    movie_title = 'Home on the Range';
+    
+-- The Rescuers Down Under: "Cody's Flight".
+UPDATE disney_characters 
+SET 
+    song = 'Cody\'s Flight'
+WHERE
+    movie_title = 'The Rescuers Down Under';
+    
+# --- NOW WE CAN USE THIS TABLE FOR ANALYSIS --- #
